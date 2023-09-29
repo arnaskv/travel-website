@@ -1,0 +1,54 @@
+.header-background {
+    background-image: url('../images/header.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .container {
+    color: azure;
+    padding-bottom: 30px;
+}
+
+header .container .row:first-child img {
+    width: 36px;
+    height: auto;
+}
+
+header .container h1 {
+    font-size: 60px;
+}
+
+.row-separator {
+    border-bottom: 2px solid rgba(240, 255, 255, 0.7);
+}
+
+.row-gap {
+    min-height: 30cap;
+    align-content: flex-end;
+}
+
+header .container .row:nth-child(2),
+header .container .row:nth-child(3) h1 {
+    font-weight: bold;
+}
+
+.submit-button {
+    background-color: rgb(226, 173, 0);
+    width: 100%;
+    min-height: 40px;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fade-in 1s ease-in-out;
+}
