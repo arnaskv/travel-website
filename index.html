@@ -16,15 +16,13 @@
       href="https://fonts.googleapis.com/css?family=Dancing+Script&family=Montserrat:400,700&&display=swap"
       rel="stylesheet"
     >
+    <link rel="stylesheet" href="css/variables.css">
     <link href="./css/header.css" rel="stylesheet" type="text/css">
     <link href="./css/destinations.css" rel="stylesheet" type="text/css">
     <link href="./css/footer.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="header-background">
+    <header class="menu header-background">
       <div class="container">
         <div class="row py-4 gy-5 row-separator">
           <div class="col">
@@ -38,8 +36,9 @@
             <img id="menu" src="./icons/three-bars-white.svg" alt="Menu">
           </div>
           <div class="col-lg text-end  d-none d-lg-block">
-            <label for="destinations">Destinations</label>
-            <button class="btn btn-light rounded-5">Sign in</button>
+            <a href="destinations.html" type="button" class="btn btn-link" id="destinations">Destinations</a>
+            <a href="contact.html" type="button" class="btn btn-link" id="contact">Contact</a>
+            <!-- <button class="btn btn-light rounded-5 border-light">Sign in</button> -->
           </div>
         </div>
         <div class="row row-gap">
@@ -53,11 +52,11 @@
             destination
           </h1>
         </div>
-        <div class="row">
+        <form class="row">
           <div class="col-12 col-lg-3">
             <label for="destination" class="form-label">Destination</label>
             <select class="form-select" id="destination" name="destination" required>
-              <option selected hidden>Select destination</option>
+              <option disabled selected hidden>Select destination</option>
               <option value="paris">Paris</option>
               <option value="tokyo">Tokyo</option>
               <option value="sydney">Sydney</option>
@@ -77,17 +76,19 @@
             <input type="number" class="form-control" name="guests" id="guests" value="1" min="1" max="10" required>
           </div>
           <div class="col-12 col-lg-1 gy-4 align-self-end">
-            <button class="rounded-5 submit-button" type="submit">
-              <img src="icons/arrow-right.svg" alt="submit button">
+            <button class="btn btn-warning rounded-5 submit-button" type="submit">
+              <img src="icons/arrow-right.svg" alt="arrow">
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </header>
     <section>
       <div class="container py-5">
         <div class="row py-3">
-          <h2 id="destinations">Destinations</h2>
+          <h2>
+              Destinations
+          </h2>
         </div>
         <div class="row py-3">
           <div class="col-12 col-lg-4">
@@ -121,38 +122,42 @@
       </div>
       <div class="row gy-3 gx-3">
         <div class="col-6 col-lg-3">
-          <div class="position-relative img-gradient">
-            <img src="images/destinations/paris.jpg" class="img-fluid rounded-4" alt="paris">
+          <div class="position-relative">
+            <img src="images/destinations/paris.jpg" class="img-fluid rounded-4" alt="eiffel tower">
+            <div class="img-gradient rounded-4"></div>
             <div class="text-overlay">
-              <h2>Paris</h2>
-              <p>France</p>
+              <p class="city">Paris</p>
+              <p class="country">France</p>
             </div>
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="position-relative">
-            <img src="images/destinations/san-francisco.jpg" class="img-fluid rounded-4" alt="san francisco">
+            <img src="images/destinations/san-francisco.jpg" class="img-fluid rounded-4" alt="golden gate bridge">
+            <div class="img-gradient rounded-4"></div>
             <div class="text-overlay">
-              <h2>San Francisco</h2>
-              <p>United States</p>
+              <p class="city">San Francisco</p>
+              <p class="country">United States</p>
             </div>
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="position-relative">
-            <img src="images/destinations/sydney.jpg" class="img-fluid rounded-4" alt="sydney">
+            <img src="images/destinations/sydney.jpg" class="img-fluid rounded-4" alt="sydney opera house">
+            <div class="img-gradient rounded-4"></div>
             <div class="text-overlay">
-              <h2>Sydney</h2>
-              <p>Australia</p>
+              <p class="city">Sydney</p>
+              <p class="country">Australia</p>
             </div>
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="position-relative">
-            <img src="images/destinations/tokyo.jpg" class="img-fluid rounded-4" alt="tokyo">
+            <img src="images/destinations/tokyo.jpg" class="img-fluid rounded-4" alt="tokyo metropolitan">
+            <div class="img-gradient rounded-4"></div>
             <div class="text-overlay">
-              <h2>Tokyo</h2>
-              <p>Japan</p>
+              <p class="city">Tokyo</p>
+              <p class="country">Japan</p>
             </div>
           </div>
         </div>
@@ -165,9 +170,9 @@
           <div class="col-12 col-lg-6 py-2">
             <h3>Links</h3>
             <a href="#menu">Home</a><br>
-            <a href="#destinations">Destinations</a><br>
+            <a href="destinations.html">Destinations</a><br>
             <a href="">About</a><br>
-            <a href="">Contact</a><br>
+            <a href="contact.html">Contact</a><br>
           </div>
           <div class="col-12 col-lg-6">
             <h3>Newsletter</h3>
@@ -175,13 +180,13 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               euismod, nisl nec tincidunt dapibus, magna libero fermentum augu.
             </p>
-            <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Email" aria-label="email input" aria-describedby="newsletter email form" required>
-              <button class="btn btn-success" type="button" id="email-submit">
+            <form class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Email" required>
+              <button class="btn btn-success" type="submit">
                 Subscribe
                 <img src="icons/arrow-right-white.svg" alt="right arrow">
               </button>
-            </div>            
+            </form>            
           </div>
         </div>
       </div>
