@@ -22,7 +22,7 @@
                 <div class="row pb-5">
                     <div class="col">
                         <a href="index.html" class="btn btn-light rounded-5 border-white">
-                            <img src="icons/arrow-right.svg" class="rotate-y">
+                            <img src="icons/arrow-right.svg" class="rotate-y" alt="arrow back">
                             Home
                         </a>
                     </div>
@@ -32,31 +32,29 @@
                 </div>
             </div>
         </header>
-        <contact>
-            <div class="container content-height">
-                <form action="contact-success.html" class="row g-3 py-5">
-                    <div class="col-12 col-md-6 col-xxl-4">
-                        <label for="contact-name" class="form-label">Name</label>
-                        <input type="text" class="form-control" name="contact-name" id="contact-name" required>
-                    </div>
-                    <div class="col-12 col-md-6 col-xxl-4">
-                        <label for="contact-email" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="contact-email" id="contact-email" required>
-                    </div>
-                    <div class="col-12 col-md-6 col-xxl-4">
-                        <label for="contact-number" class="form-label">Phone number</label>
-                        <input type="tel" class="form-control" name="contact-number" id="contact-number" required>
-                    </div>
-                    <div class="col-12">
-                        <label for="contact-message" class="form-label">Message</label>
-                        <textarea name="contact-message" class="form-control" id="contact-message" cols="30" rows="5" required></textarea>
-                    </div>
-                    <div class="col text-center">
-                        <button type="submit" class="btn btn-warning rounded-5 flex-end">Submit <img src="icons/arrow-right.svg"></button>
-                    </div>
-                </form>
-            </div>
-        </contact>
+        <div id="contact" class="container content-height">
+            <form action="contact-success.html" class="row g-3 py-5">
+                <div class="col-12 col-md-6 col-xxl-4">
+                    <label for="contact-name" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="contact-name" id="contact-name" required>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4">
+                    <label for="contact-email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="contact-email" id="contact-email" required>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4">
+                    <label for="contact-number" class="form-label">Phone number</label>
+                    <input type="tel" class="form-control" name="contact-number" id="contact-number" required>
+                </div>
+                <div class="col-12">
+                    <label for="contact-message" class="form-label">Message</label>
+                    <textarea name="contact-message" class="form-control" id="contact-message" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-warning rounded-5 flex-end">Submit <img src="icons/arrow-right.svg" alt="arrow confirm"></button>
+                </div>
+            </form>
+        </div>
     </div>
     <footer>
         <div class="container py-5">
@@ -75,7 +73,7 @@
                   euismod, nisl nec tincidunt dapibus, magna libero fermentum augu.
                 </p>
                 <form class="input-group mb-3">
-                  <input type="email" name="email" class="form-control" placeholder="Email" aria-describedby="newsletter email form" required>
+                  <input type="email" name="email" class="form-control" placeholder="Email" required>
                   <button class="btn btn-success" type="submit">
                     Subscribe
                     <img src="icons/arrow-right-white.svg" alt="right arrow">
